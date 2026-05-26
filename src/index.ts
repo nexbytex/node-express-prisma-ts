@@ -15,7 +15,7 @@ app.get("/users", async (req: Request, res: Response) => {
     res.status(200).json(users)
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 
 app.listen(PORT, () => {
